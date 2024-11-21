@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'ADLaM Display Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('ADLaM Display Regular'), url('/html/fonts/ADLaMDisplay-Regular.woff') format('woff');
+}
