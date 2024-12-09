@@ -1,0 +1,325 @@
+[
+    {
+        "id": "5454e3d1b9e3925b",
+        "type": "tab",
+        "label": "Sign In/Up",
+        "disabled": false,
+        "locked": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1080cbd317d9bc62",
+        "type": "group",
+        "z": "5454e3d1b9e3925b",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "51f412b9028e8f67",
+            "8722c5f194f3851b",
+            "7d103896eaf2b01f",
+            "c3d8d0d4bfe0f71b"
+        ],
+        "x": 74,
+        "y": 59,
+        "w": 632,
+        "h": 122
+    },
+    {
+        "id": "635c64187a2153d6",
+        "type": "ui_form",
+        "z": "5454e3d1b9e3925b",
+        "name": "",
+        "label": "Log In",
+        "group": "b8af262ec53e2753",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Username",
+                "value": "username",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Password",
+                "value": "password",
+                "type": "password",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "username": "",
+            "password": ""
+        },
+        "payload": "",
+        "submit": "Log in",
+        "cancel": "Clear all",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 170,
+        "y": 260,
+        "wires": [
+            [
+                "145e9a4709ebd82e"
+            ]
+        ]
+    },
+    {
+        "id": "145e9a4709ebd82e",
+        "type": "function",
+        "z": "5454e3d1b9e3925b",
+        "name": "Check log in data",
+        "func": "let account = global.get(\"user\");\nif (account.username === msg.payload.username && account.password === msg.payload.password) {\n    msg.msg = true\n}\nelse {\n    msg.msg = false;\n    msg.payload = \"Invalid username or password!\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 260,
+        "wires": [
+            [
+                "1763a2a7c5ee81c3"
+            ]
+        ]
+    },
+    {
+        "id": "1763a2a7c5ee81c3",
+        "type": "switch",
+        "z": "5454e3d1b9e3925b",
+        "name": "",
+        "property": "msg",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 570,
+        "y": 260,
+        "wires": [
+            [
+                "95e85fb554b17966"
+            ],
+            [
+                "d2e5a518866c90a9"
+            ]
+        ]
+    },
+    {
+        "id": "95e85fb554b17966",
+        "type": "change",
+        "z": "5454e3d1b9e3925b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 760,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d2e5a518866c90a9",
+        "type": "ui_toast",
+        "z": "5454e3d1b9e3925b",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 750,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "51f412b9028e8f67",
+        "type": "inject",
+        "z": "5454e3d1b9e3925b",
+        "d": true,
+        "g": "1080cbd317d9bc62",
+        "name": "Begin with \"Log in\" tab",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "0.01",
+        "topic": "",
+        "payload": "{\"tab\":\"Log in\"}",
+        "payloadType": "json",
+        "x": 220,
+        "y": 140,
+        "wires": [
+            [
+                "7d103896eaf2b01f"
+            ]
+        ]
+    },
+    {
+        "id": "8722c5f194f3851b",
+        "type": "comment",
+        "z": "5454e3d1b9e3925b",
+        "d": true,
+        "g": "1080cbd317d9bc62",
+        "name": "Unable and hide other tabs, direct to \"Log in\" tab.",
+        "info": "",
+        "x": 280,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "7d103896eaf2b01f",
+        "type": "change",
+        "z": "5454e3d1b9e3925b",
+        "d": true,
+        "g": "1080cbd317d9bc62",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"tabs\":{\"hide\":[\"Home\",\"Feeding\",\"Camera\"],\"disable\":[\"Home\",\"Feeding\",\"Camera\"]},\"tab\":\"Log in\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 440,
+        "y": 140,
+        "wires": [
+            [
+                "c3d8d0d4bfe0f71b"
+            ]
+        ]
+    },
+    {
+        "id": "c3d8d0d4bfe0f71b",
+        "type": "ui_ui_control",
+        "z": "5454e3d1b9e3925b",
+        "d": true,
+        "g": "1080cbd317d9bc62",
+        "name": "",
+        "events": "all",
+        "x": 620,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8c2aa0554f7815e8",
+        "type": "ui_spacer",
+        "z": "5454e3d1b9e3925b",
+        "name": "spacer",
+        "group": "32efa4e223caa36e",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "0c49a3b3381588f6",
+        "type": "ui_spacer",
+        "z": "5454e3d1b9e3925b",
+        "name": "spacer",
+        "group": "32efa4e223caa36e",
+        "order": 4,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "56d3fcd2e27cec19",
+        "type": "ui_spacer",
+        "z": "5454e3d1b9e3925b",
+        "name": "spacer",
+        "group": "32efa4e223caa36e",
+        "order": 7,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "b8af262ec53e2753",
+        "type": "ui_group",
+        "name": "Sign In",
+        "tab": "ed4f60a46377fea8",
+        "order": 2,
+        "disp": false,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "32efa4e223caa36e",
+        "type": "ui_group",
+        "name": "Feeder Controls",
+        "tab": "b14e42edc98b63ed",
+        "order": 1,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ed4f60a46377fea8",
+        "type": "ui_tab",
+        "name": "Sign In",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "b14e42edc98b63ed",
+        "type": "ui_tab",
+        "name": "Feeding",
+        "icon": "restaurant",
+        "disabled": false,
+        "hidden": false
+    }
+]
