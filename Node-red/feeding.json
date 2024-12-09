@@ -1,0 +1,867 @@
+[
+    {
+        "id": "cb5b82f721a2df42",
+        "type": "tab",
+        "label": "Feeding",
+        "disabled": false,
+        "locked": true,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9771908dc063993d",
+        "type": "group",
+        "z": "cb5b82f721a2df42",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "b8d67ac978694e54",
+            "efa164e254921454",
+            "e35f8b6a8ec7c6dd",
+            "b6d4390b341e5fd8"
+        ],
+        "x": 14,
+        "y": 19,
+        "w": 352,
+        "h": 162
+    },
+    {
+        "id": "34b3bfee20a4ce6c",
+        "type": "group",
+        "z": "cb5b82f721a2df42",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "c92f17ae3dd66be2",
+            "682d608211565363",
+            "0d5edf4e39cb58c1",
+            "f29e900f3101adfe",
+            "6585e638147bf5ed",
+            "62a9098351ba2a44"
+        ],
+        "x": 14,
+        "y": 199,
+        "w": 412,
+        "h": 202
+    },
+    {
+        "id": "d359bd500f468750",
+        "type": "group",
+        "z": "cb5b82f721a2df42",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "2d1d80faad26dc22",
+            "0a0305229e696893",
+            "a932478aa72ed3cd",
+            "2b0a245f360c246b",
+            "dc8dc44090fa6531"
+        ],
+        "x": 454,
+        "y": 239,
+        "w": 592,
+        "h": 162
+    },
+    {
+        "id": "d9ef48010a0d1226",
+        "type": "group",
+        "z": "cb5b82f721a2df42",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "076744cbe34b4ce4",
+            "540249498d050158",
+            "5ece6e06d6ae44a2",
+            "7a05e801d9902a60"
+        ],
+        "x": 14,
+        "y": 419,
+        "w": 772,
+        "h": 82
+    },
+    {
+        "id": "efa164e254921454",
+        "type": "ui_dropdown",
+        "z": "cb5b82f721a2df42",
+        "g": "9771908dc063993d",
+        "name": "",
+        "label": "Food intake",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "32efa4e223caa36e",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "500g",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "400g",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "200g",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "100g",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "50g",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 250,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e35f8b6a8ec7c6dd",
+        "type": "ui_button",
+        "z": "cb5b82f721a2df42",
+        "g": "9771908dc063993d",
+        "name": "",
+        "group": "32efa4e223caa36e",
+        "order": 5,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "Feed now",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "#01879A",
+        "className": "",
+        "icon": "restaurant_menu",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 240,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b8d67ac978694e54",
+        "type": "ui_text",
+        "z": "cb5b82f721a2df42",
+        "g": "9771908dc063993d",
+        "group": "32efa4e223caa36e",
+        "order": 6,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "Current weight: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 260,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "c92f17ae3dd66be2",
+        "type": "ui_media",
+        "z": "cb5b82f721a2df42",
+        "g": "34b3bfee20a4ce6c",
+        "group": "d8e381f8069492b7",
+        "name": "",
+        "width": 4,
+        "height": 3,
+        "order": 1,
+        "category": "Schedule",
+        "file": "domestic-pet-food-assortment (1).png",
+        "layout": "center",
+        "showcontrols": true,
+        "loop": true,
+        "onstart": false,
+        "scope": "local",
+        "tooltip": "",
+        "x": 90,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "682d608211565363",
+        "type": "ui_text",
+        "z": "cb5b82f721a2df42",
+        "g": "34b3bfee20a4ce6c",
+        "group": "d8e381f8069492b7",
+        "order": 5,
+        "width": 4,
+        "height": 1,
+        "name": "",
+        "label": "Feeded amount: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 120,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "0d5edf4e39cb58c1",
+        "type": "ui_button",
+        "z": "cb5b82f721a2df42",
+        "g": "34b3bfee20a4ce6c",
+        "name": "Send schedule",
+        "group": "d8e381f8069492b7",
+        "order": 6,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "Send schedule",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "#01879A",
+        "className": "",
+        "icon": "",
+        "payload": "clear",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "str",
+        "x": 320,
+        "y": 360,
+        "wires": [
+            [
+                "0a0305229e696893"
+            ]
+        ]
+    },
+    {
+        "id": "2d1d80faad26dc22",
+        "type": "ui_ui_control",
+        "z": "cb5b82f721a2df42",
+        "g": "d359bd500f468750",
+        "name": "",
+        "events": "all",
+        "x": 540,
+        "y": 320,
+        "wires": [
+            [
+                "0a0305229e696893"
+            ]
+        ]
+    },
+    {
+        "id": "0a0305229e696893",
+        "type": "function",
+        "z": "cb5b82f721a2df42",
+        "g": "d359bd500f468750",
+        "name": "reset logs",
+        "func": "flow.set('logs', []);  // Xóa dữ liệu logs trong flow context\nreturn { payload: [] };\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a932478aa72ed3cd",
+        "type": "function",
+        "z": "cb5b82f721a2df42",
+        "g": "d359bd500f468750",
+        "name": "insert_into_logs",
+        "func": " // Lấy hoặc khởi tạo danh sách logs\nvar logs = flow.get('logs') || [];\n\n// Thêm nhật ký vào danh sách\nlogs.push(msg.payload);\n\n// Cập nhật lại biến logs\nflow.set('logs', logs);\n\n// Trả về msg.payload chứa danh sách logs\nmsg.payload = logs;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 280,
+        "wires": [
+            [
+                "dc8dc44090fa6531"
+            ]
+        ]
+    },
+    {
+        "id": "2b0a245f360c246b",
+        "type": "function",
+        "z": "cb5b82f721a2df42",
+        "g": "d359bd500f468750",
+        "name": "datetime_log_info",
+        "func": "var rowInfo = {\n    topic: \"Date\",\n    payload: msg.payload\n};\n\nmsg.payload = rowInfo;\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 280,
+        "wires": [
+            [
+                "a932478aa72ed3cd"
+            ]
+        ]
+    },
+    {
+        "id": "dc8dc44090fa6531",
+        "type": "ui_template",
+        "z": "cb5b82f721a2df42",
+        "g": "d359bd500f468750",
+        "group": "f4c74f235ae88131",
+        "name": "",
+        "order": 1,
+        "width": 10,
+        "height": 8,
+        "format": "<table border=\"0.5\">\n    <tr>\n        <th>Date</th>\n        <th>Time</th>\n        <th>Amount</th>\n    </tr>\n    <tr ng-repeat=\"x in msg.payload\">\n        <td>{{x.date}}</td>\n        <td>{{x.time}}</td>\n        <td>{{x.amount}}</td>\n    </tr>\n</table>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 960,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f29e900f3101adfe",
+        "type": "ui_dropdown",
+        "z": "cb5b82f721a2df42",
+        "g": "34b3bfee20a4ce6c",
+        "name": "",
+        "label": "Food intake",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "d8e381f8069492b7",
+        "order": 3,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "500g",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "400g",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "200g",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "100g",
+                "type": "str"
+            },
+            {
+                "label": "",
+                "value": "50g",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 310,
+        "y": 280,
+        "wires": [
+            [
+                "2b0a245f360c246b"
+            ]
+        ]
+    },
+    {
+        "id": "6585e638147bf5ed",
+        "type": "ui_button",
+        "z": "cb5b82f721a2df42",
+        "g": "34b3bfee20a4ce6c",
+        "name": "Add row",
+        "group": "d8e381f8069492b7",
+        "order": 4,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "label": "Add to schedule",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "#01879A",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "str",
+        "x": 300,
+        "y": 320,
+        "wires": [
+            [
+                "2b0a245f360c246b"
+            ]
+        ]
+    },
+    {
+        "id": "62a9098351ba2a44",
+        "type": "ui_text_input",
+        "z": "cb5b82f721a2df42",
+        "g": "34b3bfee20a4ce6c",
+        "name": "Datetime",
+        "label": "Datetime",
+        "tooltip": "",
+        "group": "d8e381f8069492b7",
+        "order": 2,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "mode": "datetime-local",
+        "delay": "0",
+        "topic": "",
+        "sendOnBlur": false,
+        "className": "",
+        "topicType": "str",
+        "x": 300,
+        "y": 240,
+        "wires": [
+            [
+                "2b0a245f360c246b"
+            ]
+        ]
+    },
+    {
+        "id": "5ece6e06d6ae44a2",
+        "type": "ui_text",
+        "z": "cb5b82f721a2df42",
+        "g": "d9ef48010a0d1226",
+        "group": "6fe9de1e51355e7d",
+        "order": 1,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "Today's Feeding",
+        "format": "22",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 120,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "540249498d050158",
+        "type": "ui_text",
+        "z": "cb5b82f721a2df42",
+        "g": "d9ef48010a0d1226",
+        "group": "6fe9de1e51355e7d",
+        "order": 2,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "Last Feeding",
+        "format": "4h ago",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 290,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "7a05e801d9902a60",
+        "type": "ui_text",
+        "z": "cb5b82f721a2df42",
+        "g": "d9ef48010a0d1226",
+        "group": "6fe9de1e51355e7d",
+        "order": 3,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "Today Consumed",
+        "format": "550g",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 470,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "076744cbe34b4ce4",
+        "type": "ui_text",
+        "z": "cb5b82f721a2df42",
+        "g": "d9ef48010a0d1226",
+        "group": "6fe9de1e51355e7d",
+        "order": 4,
+        "width": 5,
+        "height": 1,
+        "name": "",
+        "label": "Container Remains",
+        "format": "1000g",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 670,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "b6d4390b341e5fd8",
+        "type": "ui_media",
+        "z": "cb5b82f721a2df42",
+        "g": "9771908dc063993d",
+        "group": "32efa4e223caa36e",
+        "name": "",
+        "width": 3,
+        "height": 2,
+        "order": 1,
+        "category": "Feeder",
+        "file": "still-life-pet-food-arrangement (1).png",
+        "layout": "center",
+        "showcontrols": true,
+        "loop": true,
+        "onstart": false,
+        "scope": "local",
+        "tooltip": "",
+        "x": 90,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d2ae0190ede132ab",
+        "type": "ui_spacer",
+        "z": "cb5b82f721a2df42",
+        "name": "spacer",
+        "group": "4f488bd147c8f0b8",
+        "order": 2,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "ad388c3dac192537",
+        "type": "ui_spacer",
+        "z": "cb5b82f721a2df42",
+        "name": "spacer",
+        "group": "4f488bd147c8f0b8",
+        "order": 3,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "379dfd396f68f6e2",
+        "type": "ui_spacer",
+        "z": "cb5b82f721a2df42",
+        "name": "spacer",
+        "group": "4f488bd147c8f0b8",
+        "order": 4,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "cf50eaf0c2266fbb",
+        "type": "ui_spacer",
+        "z": "cb5b82f721a2df42",
+        "name": "spacer",
+        "group": "4f488bd147c8f0b8",
+        "order": 5,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "d41f0cedf89a7d07",
+        "type": "ui_spacer",
+        "z": "cb5b82f721a2df42",
+        "name": "spacer",
+        "group": "4f488bd147c8f0b8",
+        "order": 6,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "a4f0e9effe9da9fa",
+        "type": "ui_spacer",
+        "z": "cb5b82f721a2df42",
+        "name": "spacer",
+        "group": "4f488bd147c8f0b8",
+        "order": 7,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "ed3efbc401457f33",
+        "type": "ui_spacer",
+        "z": "cb5b82f721a2df42",
+        "name": "spacer",
+        "group": "4f488bd147c8f0b8",
+        "order": 8,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "0e02093b95943402",
+        "type": "ui_spacer",
+        "z": "cb5b82f721a2df42",
+        "name": "spacer",
+        "group": "4f488bd147c8f0b8",
+        "order": 9,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "3a369e885e65dd94",
+        "type": "ui_spacer",
+        "z": "cb5b82f721a2df42",
+        "name": "spacer",
+        "group": "4f488bd147c8f0b8",
+        "order": 10,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "9b00bc5da2fa3ea8",
+        "type": "ui_spacer",
+        "z": "cb5b82f721a2df42",
+        "name": "spacer",
+        "group": "4f488bd147c8f0b8",
+        "order": 12,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "acb5eddc67e85e03",
+        "type": "ui_spacer",
+        "z": "cb5b82f721a2df42",
+        "name": "spacer",
+        "group": "4f488bd147c8f0b8",
+        "order": 13,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "92f907672b4fe0e2",
+        "type": "ui_spacer",
+        "z": "cb5b82f721a2df42",
+        "name": "spacer",
+        "group": "4f488bd147c8f0b8",
+        "order": 14,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "79be7e988f84e691",
+        "type": "ui_spacer",
+        "z": "cb5b82f721a2df42",
+        "name": "spacer",
+        "group": "4f488bd147c8f0b8",
+        "order": 15,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "5b7adf5c9cad4fd6",
+        "type": "ui_spacer",
+        "z": "cb5b82f721a2df42",
+        "name": "spacer",
+        "group": "4f488bd147c8f0b8",
+        "order": 16,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "85e021dc03cab9bb",
+        "type": "ui_spacer",
+        "z": "cb5b82f721a2df42",
+        "name": "spacer",
+        "group": "4f488bd147c8f0b8",
+        "order": 17,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "2f53df43bbfae131",
+        "type": "ui_spacer",
+        "z": "cb5b82f721a2df42",
+        "name": "spacer",
+        "group": "4f488bd147c8f0b8",
+        "order": 18,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "303e94b1262e9718",
+        "type": "ui_spacer",
+        "z": "cb5b82f721a2df42",
+        "name": "spacer",
+        "group": "4f488bd147c8f0b8",
+        "order": 19,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "bcdb274836bf22fc",
+        "type": "ui_spacer",
+        "z": "cb5b82f721a2df42",
+        "name": "spacer",
+        "group": "4f488bd147c8f0b8",
+        "order": 20,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "3eefca2ea2a71bc6",
+        "type": "ui_spacer",
+        "z": "cb5b82f721a2df42",
+        "name": "spacer",
+        "group": "4f488bd147c8f0b8",
+        "order": 2,
+        "width": 3,
+        "height": 1
+    },
+    {
+        "id": "32efa4e223caa36e",
+        "type": "ui_group",
+        "name": "Feeder Controls",
+        "tab": "b14e42edc98b63ed",
+        "order": 1,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d8e381f8069492b7",
+        "type": "ui_group",
+        "name": "Scheduling",
+        "tab": "b14e42edc98b63ed",
+        "order": 3,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f4c74f235ae88131",
+        "type": "ui_group",
+        "name": "Scheduler Plan",
+        "tab": "b14e42edc98b63ed",
+        "order": 2,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6fe9de1e51355e7d",
+        "type": "ui_group",
+        "name": "Statistics",
+        "tab": "b14e42edc98b63ed",
+        "order": 4,
+        "disp": true,
+        "width": "20",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4f488bd147c8f0b8",
+        "type": "ui_group",
+        "name": "Logs",
+        "tab": "61031e0859d4b5fc",
+        "order": 2,
+        "disp": true,
+        "width": "10",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b14e42edc98b63ed",
+        "type": "ui_tab",
+        "name": "Feeding",
+        "icon": "restaurant",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "61031e0859d4b5fc",
+        "type": "ui_tab",
+        "name": "Event Logs",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]

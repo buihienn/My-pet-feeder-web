@@ -1,0 +1,206 @@
+[
+    {
+        "id": "fd61fd0eb345e922",
+        "type": "tab",
+        "label": "Setting",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "60413d51bede5a6a",
+        "type": "ui_switch",
+        "z": "fd61fd0eb345e922",
+        "name": "",
+        "label": "Phone notification",
+        "tooltip": "",
+        "group": "c0388cc5d8d8283c",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 190,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "02f53385cdacca0a",
+        "type": "ui_switch",
+        "z": "fd61fd0eb345e922",
+        "name": "",
+        "label": "Email notification",
+        "tooltip": "",
+        "group": "c0388cc5d8d8283c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 190,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "75c9103164044254",
+        "type": "ui_switch",
+        "z": "fd61fd0eb345e922",
+        "name": "",
+        "label": "Light",
+        "tooltip": "",
+        "group": "c0388cc5d8d8283c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "light_switch",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 150,
+        "y": 260,
+        "wires": [
+            [
+                "1740fb0e20d5a118"
+            ]
+        ]
+    },
+    {
+        "id": "dropdown",
+        "type": "ui_dropdown",
+        "z": "fd61fd0eb345e922",
+        "name": "Cường độ đèn",
+        "label": "Cường độ đèn",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "c0388cc5d8d8283c",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "10%",
+                "value": "10",
+                "type": "str"
+            },
+            {
+                "label": "20%",
+                "value": "20",
+                "type": "str"
+            },
+            {
+                "label": "50%",
+                "value": "50",
+                "type": "str"
+            },
+            {
+                "label": "100%",
+                "value": "100",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "light_intensity",
+        "topicType": "str",
+        "className": "",
+        "x": 600,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "535a97b227cc1332",
+        "type": "ui_ui_control",
+        "z": "fd61fd0eb345e922",
+        "name": "",
+        "events": "all",
+        "x": 580,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1740fb0e20d5a118",
+        "type": "function",
+        "z": "fd61fd0eb345e922",
+        "name": "function 9",
+        "func": "if (msg.payload === 1) {\n    return { ui_control: { disable: false } }; // Enable dropdown\n} else {\n    return { ui_control: { disable: true } }; // Disable dropdown\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 260,
+        "wires": [
+            [
+                "dropdown",
+                "535a97b227cc1332"
+            ]
+        ]
+    },
+    {
+        "id": "c0388cc5d8d8283c",
+        "type": "ui_group",
+        "name": "Setting",
+        "tab": "d8028851d5fae66a",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d8028851d5fae66a",
+        "type": "ui_tab",
+        "name": "Setting",
+        "icon": "settings",
+        "disabled": false,
+        "hidden": false
+    }
+]
